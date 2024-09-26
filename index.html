@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="vi-VN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop thằn lằn bám kính</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+   <!-----------------HEADER-------------------->
+   <header>
+    <!------------------NAV BAR----------------------->
+           <div class="nav container">
+                <a href="#" class="logo">Thằn lằn bám kính shop</a>
+                <i class='bx bx-shopping-bag' id="cart-icon"></i>
+                <div class="cart">
+                    <h2 class="cart-title">Your cart</h2>
+                    <div class="cart-content">
+                
+                    </div>
+                    <!---------------TOTAL----------------->
+                    <div class="total">
+                        <div class="total-title">Total</div>
+                        <div class="total-price">0 VND</div>
+                    </div>
+                    <!---------------CHECK OUT------------------>
+                    <button type="button" class="btn-buy">Đặt hàng</button>
+                    <!-----------------CART CLOSE------------->
+                    <i class='bx bx-x' id="close-cart"></i>
+                </div>
+           </div>
+   </header>
+
+   <!-----------------------SHOP---------------------------->
+   <section class="shop container">
+    <h2 class="section-title">Thằn lằn</h2>
+    <!-----------------------CONTENT----------------------->
+    <div class="shop-content">
+        
+        <!-- render here -->
+    </div>
+   </section>
+
+   <script src="./main.js"></script>
+   <script src="config.js"></script>
+   <script>
+    //render product
+    for(let i = 0; i < sanpham.length; i++){
+        document.querySelector('.shop-content').innerHTML += `
+        <div class="product-box">
+            <img src="${sanpham[i].imgsrc}" alt="" class="product-img">
+            <h2 class="product-title">${sanpham[i].title}</h2>
+            <span class="price">${sanpham[i].price}</span>
+            <i class='bx bx-shopping-bag add-cart'></i>
+        </div>
+        `
+    }
+   </script>
+<body>
+    
+</body>
+</html>
